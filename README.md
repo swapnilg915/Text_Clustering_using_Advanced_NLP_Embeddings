@@ -1,13 +1,13 @@
 # Clustering text documents using advanced NLP embeddings 
 
-Cluster your documents/sentences into different clusters using 
+Cluster your documents/sentences into different clusters/groups.
 
 It uses 
-1. google's state of the art (SOTA) Word2vec model
-2. google's state of the art (SOTA) BERT model
+1. TF-IDF
+2. google's state of the art (SOTA) Word2vec model
+3. google's state of the art (SOTA) BERT model
 
-steps to create your own FAQBot:
-
+To change the embedding technique, edit it in the dataset json file under dataset directory named: clustering_20newsgroup_training_data.json 
 setup the project environment
 1. Create virtual environment using the command : python3.7 -m venv faqbot_env_3.7
 2. Activate the virtual environment using : source faqbot_env_3.7/bin/activate
@@ -28,5 +28,7 @@ Download google's pre-trained word2vec model from: https://drive.google.com/file
 
 References:
 https://github.com/hanxiao/bert-as-service
+https://scikit-learn.org/stable/auto_examples/text/plot_document_clustering.html
+https://blog.eduonix.com/artificial-intelligence/clustering-similar-sentences-together-using-machine-learning/
 
 
