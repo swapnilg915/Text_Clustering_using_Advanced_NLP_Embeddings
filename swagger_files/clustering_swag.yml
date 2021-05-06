@@ -1,0 +1,39 @@
+API clusters input sentences into different clusters. These clusters can be converted into intents.
+---
+tags:
+- Train Clustering API
+parameters:
+- name: train_json
+  in: body
+  schema:
+    type: json
+    properties:
+      BotId:
+        type: string
+        description: BotId for which Bot has been trained.
+      NumberOfClusters:
+        type: string
+        description: Number of clusters you want to create out of training data.
+      Language:
+        type: string
+        description: Language for which Bot has been trained.
+      TrainingData:
+        type: array
+        items:
+          type: string
+        
+  required: true
+  description: All parameters required to execute API.
+responses:
+  500:
+    description: Error The language is not awesome!
+  200:
+    description: Displays relevant message with status.
+    schema:
+      id: train_result
+      properties:
+        Result:
+          type: object
+          properties:
+            Status:
+              type: string

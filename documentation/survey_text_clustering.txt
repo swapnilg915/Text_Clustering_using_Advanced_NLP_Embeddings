@@ -1,0 +1,91 @@
+A] Approaches tried
+
+1. kmeans + tfidf = moderate (42 - 64)
+2. kmeans + tfidf + TruncatedSVD (for dimensionality reduction) = moderate (42 - 64)
+3. kmeans + w2v = poor (< 20)
+4. kmeans + fasttext = poor (< 20)
+5. kmeans + BERT embeddings = Good(74)
+6. kmeans + XLNET embeddings = Good (81)
+
+B] clustering techniques tried :
+
+kmeans
+Agglomerative / Hierarchical - too slow
+DBSCAN
+OPTICS
+
+LSI / LDA
+Affininty propagation
+mean shift
+spectralClustering
+Gaussina Mixture Models
+
+C] Evaluation metrics : 
+
+scale is 0 -1 (the higher the better)
+
+homogeneity_score
+completeness_score
+v_measure_score
+adjusted_rand_score
+silhouette_score
+
+
+D] Resources Read
+
+Articles:
+
+https://www.researchgate.net/post/What_are_the_current_state_of_the_art_data_clustering_algorithms_and_are_there_any_new_more_efficient_distance_metrics_for_clustering
+https://www.quora.com/What-is-the-most-used-algorithm-for-text-documents-clustering
+https://arxiv.org/pdf/1707.02919.pdf
+https://www.dummies.com/programming/big-data/data-science/how-to-visualize-the-clusters-in-a-k-means-unsupervised-learning-model/
+https://jakevdp.github.io/PythonDataScienceHandbook/05.11-k-means.html
+https://www.kaggle.com/dhanyajothimani/basic-visualization-and-clustering-in-python
+
+https://github.com/sebischair/NLU-Evaluation-Corpora
+https://towardsdatascience.com/k-means-clustering-from-a-to-z-f6242a314e9a
+
+Research papers:
+
+file:///home/swapnil/Downloads/docclusterKDDTMW00.pdf
+https://www.ijcsmc.com/docs/papers/June2015/V4I6201599a49.pdf
+
+Evaluation articles:
+https://datascience.stackexchange.com/questions/17461/how-to-test-accuracy-of-an-unsupervised-clustering-model-output
+https://nlp.stanford.edu/IR-book/html/htmledition/evaluation-of-clustering-1.html
+https://stats.stackexchange.com/questions/6252/clustering-quality-measure
+
+
+BISECTING KMEANS
+http://minethedata.blogspot.com/2012/08/bisecting-k-means.html
+https://github.com/scikit-learn/scikit-learn/issues/14214
+https://mvelayati.com/2017/07/19/data-mining-bisecting-k-means/
+https://github.com/AchillesnoMY/K-means-and-Bisecting-K-means-Method/blob/master/K-means.py
+https://github.com/scikit-learn/scikit-learn/issues/14214
+
+E] Datasets used :
+
+febdok EN
+bankid NB
+
+20 newsgroup dataset (20 classes)
+abcnews-date-text
+stackoverflow technical skills (20 classes)
+
+https://lionbridge.ai/datasets/15-best-chatbot-datasets-for-machine-learning/
+
+amazon = http://jmcauley.ucsd.edu/data/amazon/qa/
+
+https://blog.cambridgespark.com/50-free-machine-learning-datasets-natural-language-processing-d88fb9c5c8da
+
+NELFO
+
+F] Visualization
+
+wordcloud
+
+
+G] parameters tunning
+
+number of iterations
+https://stats.stackexchange.com/questions/261836/k-means-how-many-iterations-in-practical-situations

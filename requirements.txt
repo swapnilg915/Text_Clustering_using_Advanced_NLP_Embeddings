@@ -1,0 +1,16 @@
+flask
+flasgger
+pandas
+numpy
+requests
+spacy==2.2
+xlrd
+gunicorn
+scikit-learn
+scipy
+flair
+wordcloud
+matplotlib
+tensorflow==1.14
+bert-serving-server
+bert-serving-client
