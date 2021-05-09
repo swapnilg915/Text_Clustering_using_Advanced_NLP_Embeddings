@@ -103,7 +103,7 @@ class ClusterText():
 			pred_dict = self.visualize_data(pred_dict, lang, bot_id, sentences)
 
 			""" write clustering results to json """
-			with open("nelfo_kmeans_tfidf_res.json", "w+") as fs:
+			with open("clustering_results.json", "w+") as fs:
 				fs.write(json.dumps(pred_dict, indent=4))
 		except Exception as e:
 			print("\n Error in train_model : ",e)
@@ -142,9 +142,13 @@ class ClusterText():
 
 
 	def create_bert_vectors(self, sentences):
+		import pdb;pdb.set_trace()
 		print("\n inside create_bert_vectors ::: ")
-		self.bert_client = BertClient()
-		return self.bert_client.encode(sentences)
+		# self.bert_client = BertClient()
+		# return self.bert_client.encode(sentences)
+		with BertClient(port=5555, port_out=5556) as bc:
+			doc_vecs = bc.encode(sentences)
+		return doc_vecs
 
 
 	def create_w2v_vectors(self, sentences):

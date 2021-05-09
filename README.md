@@ -7,6 +7,7 @@ It uses
 3. google's state of the art (SOTA) BERT model
 
 To change the embedding technique, edit it in the dataset json file under dataset directory named: clustering_20newsgroup_training_data.json
+mention value ("tfidf" or "word2vec" or "bert") for key "EmbeddingModel" in clustering_20newsgroup_training_data.json  
 
 setup the project environment
 1. Create virtual environment using the command : python3.7 -m venv clustering_docs_env_3.7
@@ -22,7 +23,9 @@ This dataset is stored in dataset directory in the format required to run this p
 
 Start BERT service:
 1. Download pre-trained bert model of your choice from : https://github.com/google-research/bert#pre-trained-models
-2. start BERT server using this command: bert-serving-start -model_dir /home/swapnil/Projects/Embeddings/BERT/cased_L-12_H-768_A-12 -num_worker=4
+2. start BERT server using this command: bert-serving-start -model_dir /home/swapnil/Projects/Embeddings/BERT/cased_L-12_H-768_A-12
+
+NOTE: for 18846 sentences in 20 news group dataset, training took 28.90 minutes, while runnig -num_worker=1
 
 Download google's pre-trained word2vec model from: https://drive.google.com/file/d/0B7XkCwpI5KDYNlNUTTlSS21pQmM/edit
 
